@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { ReactNode, useMemo } from "react";
 import { Platform, Text, TextProps, TextStyle } from "react-native";
 import { Colors } from "../../constants";
 
@@ -109,7 +109,8 @@ export const TextTypeStyle: TextTypeStyleType = {
 };
 
 export interface ReactNativeTextProps extends TextProps {
-  textTypeStyle: keyof TextTypeStyleType;
+  textTypeStyle?: keyof TextTypeStyleType;
+  children: ReactNode;
 }
 
 const ReactNativeText = ({

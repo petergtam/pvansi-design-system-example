@@ -5,10 +5,10 @@ import ReactText, { ReactTextProps } from "./ReactText";
 export type TextProps = ReactNativeTextProps | ReactTextProps;
 
 const Text = (params: TextProps) => {
-  if (Platform.OS !== "web") {
-    return ReactNativeText(params as ReactNativeTextProps);
-  } else {
+  if (Platform.OS === "web") {
     return ReactText(params as ReactTextProps);
+  } else {
+    return ReactNativeText(params as ReactNativeTextProps);
   }
 };
 

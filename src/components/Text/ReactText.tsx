@@ -1,9 +1,10 @@
-import { HTMLProps, useMemo } from "react";
+import { HTMLProps, ReactNode, useMemo } from "react";
 import { TextTypeStyle, TextTypeStyleType } from "./ReactNativeText";
 import { Colors } from "../../constants/Colors";
 
 export interface ReactTextProps extends HTMLProps<HTMLElement> {
   textTypeStyle?: keyof TextTypeStyleType;
+  children: ReactNode;
 }
 
 const ReactText = ({

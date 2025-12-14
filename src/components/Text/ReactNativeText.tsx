@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Platform, Text, TextProps, TextStyle } from "react-native";
-import { Colors } from "../Colors";
+import { Colors } from "../../constants";
 
 interface TextStyleObject extends TextStyle {}
 

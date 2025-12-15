@@ -9,16 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## 0.1.2 - 2025-12-15
 
-- Adding remaining files while creating a new version
+### Added
+
+- All modified files while creating a new version
 
 ## 0.1.1 - 2025-12-15
 
-- Adding react-native-web as a peerDep
-- Adding lib folder to github when releasing
+### Added
+
+- react-native-web as a peerDep
+- lib folder to github when releasing
 
 ## 0.1.0 - 2025-12-15
 
-- Adding Typography Constants
-- Adding Colors Constants
-- Adding Text Component
-- Adding LargeTitle, Title, Title2, Title3, Headline, SubHeadline, SubHeadline2, Body, Body2 and Caption components
+### Added
+
+- `Typography` Constants
+- `Colors` Constants
+- `Text` Component
+- `LargeTitle`, `Title`, `Title2`, `Title3`, `Headline`, `SubHeadline`, `SubHeadline2`, `Body`, `Body2` and `Caption` components

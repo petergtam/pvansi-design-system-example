@@ -34,7 +34,7 @@
     "build": "bob build",
     "lint": "eslint .",
     "preversion": "kacl prerelease",
-    "version": "npm run build && kacl release && git add -A",
+    "version": "npm run build && kacl release && git add -A -f lib",
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
@@ -58,10 +58,14 @@
   },
   "peerDependencies": {
     "react": ">=18",
-    "react-native": ">=0.71"
+    "react-native": ">=0.71",
+    "react-native-web": ">=0.19"
   },
   "peerDependenciesMeta": {
     "react-native": {
+      "optional": true
+    },
+    "react-native-web": {
       "optional": true
     }
   },

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+- Adding remaining files while creating a new version
+
+## 0.1.1 - 2025-12-15
+
 - Adding react-native-web as a peerDep
 - Adding lib folder to github when releasing
 

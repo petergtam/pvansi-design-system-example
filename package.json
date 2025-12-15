@@ -1,6 +1,6 @@
 {
-  "name": "vansi-design-system",
-  "version": "0.1.0",
+  "name": "@pvansi/design-system-example",
+  "version": "0.0.0",
   "description": "",
   "keywords": [
     "react-native",
@@ -9,7 +9,7 @@
     "web"
   ],
   "license": "MIT",
-  "author": "Ivan Salas",
+  "author": "Pedro Ivan Salas Peña",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/index.d.ts",
   "exports": {
@@ -26,7 +26,8 @@
   "scripts": {
     "clean": "rm -rf lib",
     "format": "prettier --write .",
-    "prepare": "bob build",
+    "prepare": "husky",
+    "build": "bob build",
     "lint": "eslint ."
   },
   "devDependencies": {
@@ -38,7 +39,9 @@
     "eslint-plugin-ft-flow": "^3.0.11",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-native": "^5.0.0",
+    "husky": "^9.1.7",
     "jest": "^30.2.0",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
     "react": "^19.2.1",
     "react-native": "^0.82.1",
@@ -46,8 +49,8 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "react": "^19.2.3",
-    "react-native": "^0.83.0"
+    "react": ">=18",
+    "react-native": ">=0.71"
   },
   "peerDependenciesMeta": {
     "react-native": {

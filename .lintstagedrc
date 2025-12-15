@@ -1,0 +1,4 @@
+{
+  "!(*.{ts,tsx})": ["prettier -w -u"],
+  "*.{ts,tsx}": ["eslint", "prettier -w"]
+}

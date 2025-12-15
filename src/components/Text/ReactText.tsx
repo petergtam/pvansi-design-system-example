@@ -1,26 +1,22 @@
-import { HTMLProps, ReactNode, useMemo } from "react";
-import { TextTypeStyle, TextTypeStyleType } from "./ReactNativeText";
-import { Colors } from "../../constants/Colors";
+import { HTMLProps, ReactNode, useMemo } from 'react';
+import { TextTypeStyle } from './ReactNativeText';
+import { Colors } from '../../constants/Colors';
 
 export interface ReactTextProps extends HTMLProps<HTMLElement> {
-  textTypeStyle?: keyof TextTypeStyleType;
+  textTypeStyle?: keyof typeof TextTypeStyle;
   children: ReactNode;
 }
 
 const ReactText = ({
   children,
-  textTypeStyle = "body1",
+  textTypeStyle = 'body1',
   style,
   ...rest
 }: ReactTextProps) => {
   const textStyle = useMemo(
     () => ({
-      fontFamily: TextTypeStyle[textTypeStyle]?.fontFamily,
-      fontSize: TextTypeStyle[textTypeStyle]?.fontSize,
-      fontWeight: TextTypeStyle[textTypeStyle]?.fontWeight,
-      letterSpacing: TextTypeStyle[textTypeStyle]?.letterSpacing,
-      textTransform: TextTypeStyle[textTypeStyle]?.textTransform,
       color: Colors.duskNavy,
+      ...TextTypeStyle[textTypeStyle],
       ...style,
     }),
     [textTypeStyle, style],
@@ -28,17 +24,17 @@ const ReactText = ({
 
   const Component = useMemo(() => {
     switch (textTypeStyle) {
-      case "h1":
-      case "h2":
-      case "h3":
-      case "h4":
-      case "h5":
-      case "h6":
+      case 'h1':
+      case 'h2':
+      case 'h3':
+      case 'h4':
+      case 'h5':
+      case 'h6':
         return textTypeStyle;
-      case "none":
-        return "div";
+      case 'none':
+        return 'div';
       default:
-        return "p";
+        return 'p';
     }
   }, [textTypeStyle]);
 

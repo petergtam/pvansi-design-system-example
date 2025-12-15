@@ -1,34 +1,34 @@
 const BaseColors = {
-  horizonBlue: "#005AE6",
-  clearSkies: "#64A5FF",
-  seafoamZen: "#A0CDFF",
-  clearWords: "#F5F5FA",
-  navyGuard: "#003296",
-  deepSea: "#00143C",
-  gentleSky: "#E1E1E1",
-  silverMist: "#C4C4C4",
-  oceanicSlate: "#757575",
-  duskNavy: "#22262E",
+  horizonBlue: '#005AE6',
+  clearSkies: '#64A5FF',
+  seafoamZen: '#A0CDFF',
+  clearWords: '#F5F5FA',
+  navyGuard: '#003296',
+  deepSea: '#00143C',
+  gentleSky: '#E1E1E1',
+  silverMist: '#C4C4C4',
+  oceanicSlate: '#757575',
+  duskNavy: '#22262E',
 };
 
 const Shades = {
-  "00": "00",
-  "80": "CC",
-  "60": "99",
-  "40": "66",
-  "20": "33",
+  '00': '00',
+  '80': 'CC',
+  '60': '99',
+  '40': '66',
+  '20': '33',
 };
 
 const getAvailableShades = (colorKey: string) => {
   switch (colorKey) {
-    case "clearWords":
-    case "deepSea":
-    case "oceanicSlate":
-    case "duskNavy":
+    case 'clearWords':
+    case 'deepSea':
+    case 'oceanicSlate':
+    case 'duskNavy':
       return null;
-    case "gentleSky":
+    case 'gentleSky':
       return Object.keys(Shades).filter((shadeKey) => shadeKey === Shades[60]);
-    case "silverMist":
+    case 'silverMist':
       return Object.keys(Shades).filter(
         (shadeKey) =>
           shadeKey === Shades[80] ||
@@ -46,9 +46,9 @@ type ShadesOptions = keyof typeof Shades;
 
 type ColorsOptions =
   | BaseColorsOptions
-  | `${Exclude<BaseColorsOptions, "clearWords" | "deepSea" | "oceanicSlate" | "duskNavy" | "gentleSky">}${Exclude<ShadesOptions, "00" | "40" | "60">}`
-  | `${Exclude<BaseColorsOptions, "clearWords" | "deepSea" | "oceanicSlate" | "duskNavy" | "gentleSky" | "silverMist">}${Exclude<ShadesOptions, "00" | "20" | "60" | "80">}`
-  | `${Exclude<BaseColorsOptions, "clearWords" | "deepSea" | "oceanicSlate" | "duskNavy">}${Exclude<ShadesOptions, "00" | "20" | "40" | "80">}`;
+  | `${Exclude<BaseColorsOptions, 'clearWords' | 'deepSea' | 'oceanicSlate' | 'duskNavy' | 'gentleSky'>}${Exclude<ShadesOptions, '00' | '40' | '60'>}`
+  | `${Exclude<BaseColorsOptions, 'clearWords' | 'deepSea' | 'oceanicSlate' | 'duskNavy' | 'gentleSky' | 'silverMist'>}${Exclude<ShadesOptions, '00' | '20' | '60' | '80'>}`
+  | `${Exclude<BaseColorsOptions, 'clearWords' | 'deepSea' | 'oceanicSlate' | 'duskNavy'>}${Exclude<ShadesOptions, '00' | '20' | '40' | '80'>}`;
 
 type ColorsType = {
   [color in ColorsOptions]: string;
@@ -70,7 +70,7 @@ export const Colors = Object.keys(BaseColors).reduce((partial, colorKey) => {
   const shades = getAvailableShades(colorKey);
   if (shades) {
     for (const shade of shades) {
-      if (shade === Shades["00"]) {
+      if (shade === Shades['00']) {
         partial[colorKey as BaseColorsOptions] = getBaseColor(
           colorKey as BaseColorsOptions,
         );

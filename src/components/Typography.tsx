@@ -1,6 +1,6 @@
-import { TextProps } from "react-native";
-import { Text } from "./Text";
-import { HTMLProps } from "react";
+import { TextProps } from 'react-native';
+import { Text } from './Text';
+import { HTMLProps } from 'react';
 
 type OriginalTextProps = TextProps | HTMLProps<HTMLElement>;
 
@@ -76,7 +76,7 @@ export const Body = ({ children, ...props }: OriginalTextProps) => {
   );
 };
 
-export const Callout = ({ children, ...props }: OriginalTextProps) => {
+export const Body2 = ({ children, ...props }: OriginalTextProps) => {
   return (
     <Text textTypeStyle="body2" {...props}>
       {children}

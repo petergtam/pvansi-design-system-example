@@ -34,7 +34,7 @@
     "build": "bob build",
     "lint": "eslint .",
     "preversion": "kacl prerelease",
-    "version": "npm run build && kacl release && git add -A lib",
+    "version": "npm run build && kacl release && git add -A",
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {

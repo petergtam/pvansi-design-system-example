@@ -23,12 +23,19 @@
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petergtam/pvansi-design-system-example.git"
+  },
   "scripts": {
     "clean": "rm -rf lib",
     "format": "prettier --write .",
     "prepare": "husky",
     "build": "bob build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "preversion": "kacl prerelease",
+    "version": "npm run build && kacl release && git add -A lib",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
     "@eslint/compat": "^2.0.0",

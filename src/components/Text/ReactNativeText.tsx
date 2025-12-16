@@ -1,6 +1,6 @@
 import React, { ReactNode, useMemo } from 'react';
 import { Text, TextProps } from 'react-native';
-import { Colors, Typography } from '../../constants';
+import { Typography } from '../../constants';
 
 export const TextTypeStyle = {
   none: undefined,
@@ -31,7 +31,6 @@ const ReactNativeText = ({
 }: ReactNativeTextProps) => {
   const textStyle = useMemo(
     () => ({
-      color: Colors.duskNavy,
       ...TextTypeStyle[textTypeStyle],
       ...style,
     }),

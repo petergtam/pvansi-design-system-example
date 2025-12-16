@@ -1,6 +1,5 @@
 import { HTMLProps, ReactNode, useMemo } from 'react';
 import { TextTypeStyle } from './ReactNativeText';
-import { Colors } from '../../constants/Colors';
 
 export interface ReactTextProps extends HTMLProps<HTMLElement> {
   textTypeStyle?: keyof typeof TextTypeStyle;
@@ -15,7 +14,6 @@ const ReactText = ({
 }: ReactTextProps) => {
   const textStyle = useMemo(
     () => ({
-      color: Colors.duskNavy,
       ...TextTypeStyle[textTypeStyle],
       ...style,
     }),

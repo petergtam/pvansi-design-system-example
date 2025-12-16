@@ -14,7 +14,11 @@ The library exposes a set of components and constants that could be use either b
 
 For the case of a react app you should do a couple of extra steps in order to make it work properly, to do so you should take a look at the [react-native-web documentation.](https://necolas.github.io/react-native-web/) Specifically the [Setup part.](https://necolas.github.io/react-native-web/docs/setup/)
 
+> Note: Check an example of a web project using Vite in https://github.com/petergtam/pvansi-design-system-web
+
 For react-native it would be a matter of using the library as is. It should work with expo or the react-native cli.
+
+> Note: Check an example of a react-native app using Expo in https://github.com/petergtam/pvansi-design-system-app
 
 ### Colors
 

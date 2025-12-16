@@ -30,11 +30,10 @@
   "scripts": {
     "clean": "rm -rf lib",
     "format": "prettier --write .",
-    "prepare": "husky",
-    "build": "bob build",
+    "prepare": "bob build && husky",
     "lint": "eslint .",
     "preversion": "kacl prerelease",
-    "version": "npm run build && kacl release && git add -f lib && git add -A",
+    "version": "kacl release && git add -A",
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {

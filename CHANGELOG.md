@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+### Changed
+
+- Color default for `Text` component
+
 ## 0.1.3 - 2025-12-16
 
 ### Added

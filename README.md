@@ -1,4 +1,4 @@
-# Design System Example
+# pvansi-design-system-example
 
 A react-native and react library to expose a small example of a Design System project.
 
@@ -22,30 +22,36 @@ The library exposes the set of colors defined in [the rebranding page](https://d
 
 #### React
 
-```typescript
-import {Colors} from 'pvansi-design-system-example'
+```javascript
+import { Colors } from 'pvansi-design-system-example';
 
 const ButtonComponent = () => {
-    return <button style={{backgroundColor: Colors.horizonBlue, color: Colors.clearWords}}>Tomar foto</button>
-}
+  return (
+    <button
+      style={{ backgroundColor: Colors.horizonBlue, color: Colors.clearWords }}
+    >
+      Tomar foto
+    </button>
+  );
+};
 ```
 
 #### React Native
 
-```typescript
-import {Colors} from 'pvansi-design-system-example'
-import {Button, StyleSheet} from 'react-native'
+```javascript
+import { Colors } from 'pvansi-design-system-example';
+import { Button, StyleSheet } from 'react-native';
 
 const ButtonComponent = () => {
-    return <Button style={styles.button} title={"Tomar foto"}/>
-}
+  return <Button style={styles.button} title={'Tomar foto'} />;
+};
 
 const styles = StyleSheet.create({
-    button: {
-        backgroundColor: Colors.horizonBlue,
-        color: Colors.clearWords
-    }
-})
+  button: {
+    backgroundColor: Colors.horizonBlue,
+    color: Colors.clearWords,
+  },
+});
 ```
 
 ### Typography
@@ -62,48 +68,68 @@ Then you could use the `Typography` constants as follow
 
 #### React
 
-```typescript
-import {Typography} from 'pvansi-design-system-example'
+```javascript
+import { Typography } from 'pvansi-design-system-example';
 
 const TextComponent = () => {
-    return <p style={{...Typography.body1}}>This is a text with body1 typography</p>
-}
+  return (
+    <p style={{ ...Typography.body1 }}>This is a text with body1 typography</p>
+  );
+};
 ```
 
 #### React Native
 
-```typescript
-import {Typography} from 'pvansi-design-system-example'
-import {Text, StyleSheet} from 'react-native'
+```javascript
+import { Typography } from 'pvansi-design-system-example';
+import { Text, StyleSheet } from 'react-native';
 
 const TextComponent = () => {
-    return (<Text style={styles.text}>This is a text with body1 typography</Text>)
-}
+  return <Text style={styles.text}>This is a text with body1 typography</Text>;
+};
 
 const styles = StyleSheet.create({
-    text: {
-        ...Typography.body1
-    }
-})
+  text: {
+    ...Typography.body1,
+  },
+});
 ```
 
 ### Components
 
 Finally in order to avoid having to import the `Typography` constants each time, the library exposes a set of components that already contemplate the `Typography`
 
-```typescript
-import {Title, Body, Caption} from 'pvansi-design-system-example'
-import {View} from 'react-native'
+#### React
+
+```javascript
+import { Title, Body, Caption } from 'pvansi-design-system-example';
 
 const TypographyComponent = () => {
-    return (
-        <View>
-            <Title>This is a title text</Title>
-            <Body>This is a body text</Body>
-            <Caption>This is a caption text</Caption>
-        </View>
-        )
-}
+  return (
+    <div>
+      <Title>This is a title text</Title>
+      <Body>This is a body text</Body>
+      <Caption>This is a caption text</Caption>
+    </div>
+  );
+};
+```
+
+#### React Native
+
+```javascript
+import { Title, Body, Caption } from 'pvansi-design-system-example';
+import { View } from 'react-native';
+
+const TypographyComponent = () => {
+  return (
+    <View>
+      <Title>This is a title text</Title>
+      <Body>This is a body text</Body>
+      <Caption>This is a caption text</Caption>
+    </View>
+  );
+};
 ```
 
 ## License

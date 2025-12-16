@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-## Changed
+### Changed
 
 - The README.md to include the links to the examples
 
